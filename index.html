@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amore Regalos | Regalos con amor</title>
+
+    <meta name="description"
+        content="Amore Regalos - Regalos, tazas, peluches, accesorios y detalles para personas especiales.">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="contenedor header-contenido">
+
+            <a href="#inicio" class="logo">
+                <span class="logo-corazon">♥️</span>
+
+                <div>
+                    <strong>Amore</strong>
+                    <small>REGALOS</small>
+                </div>
+            </a>
+
+            <nav class="nav">
+
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#envios">Envíos</a>
+                <a href="#contacto">Contacto</a>
+
+            </nav>
+
+            <div class="acciones-header">
+
+                <button class="btn-favoritos-header" onclick="mostrarFavoritos()">
+                    <i class="fa-regular fa-heart"></i>
+                    <span id="contador-favoritos">0</span>
+                </button>
+
+                <button class="btn-carrito" onclick="abrirCarrito()">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span>Carrito</span>
+
+                    <b id="contador-carrito">0</b>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= INICIO ================= -->
+
+    <main>
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-contenido">
+
+                <span class="hero-etiqueta">
+                    ✨ Detalles hechos con amor
+                </span>
+
+                <h1>
+                    Regalos que hablan
+                    <span>desde el corazón</span>
+                </h1>
+
+                <p>
+                    Encontrá ese detalle especial para sorprender
+                    a las personas que más querés.
+                </p>
+
+                <div class="hero-botones">
+
+                    <a href="#productos" class="btn-principal">
+                        Ver productos
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#contacto" class="btn-secundario">
+                        Contactanos
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-decoracion">
+
+                <div class="circulo-grande">
+                    <i class="fa-solid fa-gift"></i>
+                </div>
+
+                <div class="corazon-flotante corazon-1">♥️</div>
+                <div class="corazon-flotante corazon-2">♥️</div>
+                <div class="corazon-flotante corazon-3">♥️</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BENEFICIOS ================= -->
+
+        <section class="beneficios">
+
+            <div class="contenedor beneficios-grid">
+
+                <div class="beneficio">
+
+                    <div class="beneficio-icono">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+
+                    <div>
+                        <h3>Regalos especiales</h3>
+                        <p>Detalles para cada ocasión</p>
+                    </div>
+
+                </div>
+
+                <div class="beneficio">
+
+                    <div class="beneficio-icono">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div>
+                        <h3>Hechos con amor</h3>
+                        <p>Elegidos especialmente para vos</p>
+                    </div>
+
+                </div>
+
+                <div class="beneficio">
+
+                    <div class="beneficio-icono">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+
+                    <div>
+                        <h3>Envíos</h3>
+                        <p>Consultá disponibilidad</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRODUCTOS ================= -->
+
+        <section id="productos" class="seccion productos-seccion">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+
+                    <span>♡ NUESTRA TIENDA ♡</span>
+
+                    <h2>
+                        Encontrá tu regalo
+                        <strong>perfecto</strong>
+                    </h2>
+
+                    <p>
+                        Elegí entre nuestros productos y sorprendé
+                        a alguien especial.
+                    </p>
+
+                </div>
+
+
+                <!-- BUSCADOR -->
+
+                <div class="buscador">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="buscador"
+                        placeholder="Buscar regalos, tazas, peluches..."
+                        oninput="buscarProductos()">
+
+                    <button onclick="limpiarBusqueda()" id="btn-limpiar-busqueda">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- CATEGORIAS -->
+
+                <div class="categorias">
+
+                    <button class="categoria activa"
+                        onclick="filtrarProductos('Todos', this)">
+                        Todos
+                    </button>
+
+                    <button class="categoria"
+                        onclick="filtrarProductos('Regalos', this)">
+                        🎁 Regalos
+                    </button>
+
+                    <button class="categoria"
+                        onclick="filtrarProductos('Tazas', this)">
+                        ☕ Tazas
+                    </button>
+
+                    <button class="categoria"
+                        onclick="filtrarProductos('Peluches', this)">
+                        🧸 Peluches
+                    </button>
+
+                    <button class="categoria"
+                        onclick="filtrarProductos('Accesorios', this)">
+                        💕 Accesorios
+                    </button>
+
+                </div>
+
+
+                <!-- PRODUCTOS -->
+
+                <div id="lista-productos" class="productos-grid"></div>
+
+                <div id="sin-productos" class="sin-productos">
+
+                    <i class="fa-regular fa-face-sad-tear"></i>
+
+                    <h3>No encontramos productos</h3>
+
+                    <p>
+                        Probá con otra búsqueda o categoría.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NOSOTROS ================= -->
+
+        <section id="nosotros" class="seccion nosotros">
+
+            <div class="contenedor nosotros-grid">
+
+                <div class="nosotros-imagen">
+
+                    <div class="nosotros-corazon">
+                        ♥️
+                    </div>
+
+                    <i class="fa-solid fa-gift"></i>
+
+                    <span>Amore Regalos</span>
+
+                </div>
+
+                <div class="nosotros-texto">
+
+                    <span class="subtitulo">SOBRE NOSOTROS</span>
+
+                    <h2>
+                        Regalar también es
+                        <strong>una forma de amar</strong>
+                    </h2>
+
+                    <p>
+                        En Amore Regalos creemos que un pequeño detalle
+                        puede convertirse en un recuerdo inolvidable.
+                    </p>
+
+                    <p>
+                        Seleccionamos productos pensados para sorprender
+                        en cumpleaños, aniversarios, fechas especiales o
+                        simplemente para decirle a alguien cuánto lo querés.
+                    </p>
+
+                    <div class="nosotros-lista">
+
+                        <div>
+                            <i class="fa-solid fa-heart"></i>
+                            <span>Detalles con amor</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-star"></i>
+                            <span>Productos seleccionados</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-gift"></i>
+                            <span>Opciones para cada ocasión</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ENVIOS ================= -->
+
+        <section id="envios" class="seccion envios">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+
+                    <span>♡ INFORMACIÓN ♡</span>
+
+                    <h2>
+                        Envíos y
+                        <strong>entregas</strong>
+                    </h2>
+
+                    <p>
+                        Consultanos por disponibilidad y zonas de entrega.
+                    </p>
+
+                </div>
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+
+                        <div class="info-icono">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+
+                        <h3>Envíos</h3>
+
+                        <p>
+                            Realizamos envíos según la zona.
+                            Consultá disponibilidad por WhatsApp.
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <div class="info-icono">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <h3>Punto de entrega</h3>
+
+                        <p>
+                            También podés consultar por puntos
+                            de entrega disponibles.
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <div class="info-icono">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+
+                        <h3>Tiempo de entrega</h3>
+
+                        <p>
+                            Consultá el tiempo estimado antes
+                            de realizar tu pedido.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PAGOS ================= -->
+
+        <section class="seccion pagos">
+
+            <div class="contenedor">
+
+                <div class="titulo-seccion">
+
+                    <span>♡ FORMAS DE PAGO ♡</span>
+
+                    <h2>
+                        Elegí cómo
+                        <strong>pagar</strong>
+                    </h2>
+
+                </div>
+
+                <div class="pagos-grid">
+
+                    <div class="pago-card">
+
+                        <i class="fa-solid fa-money-bill-wave"></i>
+
+                        <h3>Efectivo</h3>
+
+                        <p>
+                            Consultá condiciones de pago.
+                        </p>
+
+                    </div>
+
+
+                    <div class="pago-card">
+
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+
+                        <h3>Transferencia</h3>
+
+                        <p>
+                            Consultá los datos para realizar
+                            la transferencia.
+                        </p>
+
+                    </div>
+
+
+                    <div class="pago-card">
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                        <h3>Otros medios</h3>
+
+                        <p>
+                            Consultanos por otras opciones
+                            disponibles.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACTO ================= -->
+
+        <section id="contacto" class="contacto">
+
+            <div class="contenedor contacto-contenido">
+
+                <div>
+
+                    <span class="subtitulo">
+                        ¿TENÉS ALGUNA CONSULTA?
+                    </span>
+
+                    <h2>
+                        Estamos para
+                        <strong>ayudarte 💕</strong>
+                    </h2>
+
+                    <p>
+                        Escribinos y te ayudamos a elegir
+                        el regalo perfecto.
+                    </p>
+
+                </div>
+
+                <a
+                    href="https://wa.me/5492646061764"
+                    target="_blank"
+                    class="btn-whatsapp">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Escribir por WhatsApp
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="contenedor footer-grid">
+
+            <div class="footer-marca">
+
+                <a href="#inicio" class="logo logo-footer">
+
+                    <span class="logo-corazon">♥️</span>
+
+                    <div>
+                        <strong>Amore</strong>
+                        <small>REGALOS</small>
+                    </div>
+
+                </a>
+
+                <p>
+                    Regalos elegidos con amor para
+                    personas especiales.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Enlaces</h3>
+
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#envios">Envíos</a>
+                <a href="#contacto">Contacto</a>
+
+            </div>
+
+
+            <div class="footer-contacto">
+
+                <h3>Seguinos</h3>
+
+                <div class="redes">
+
+                    <!-- CAMBIAR ESTE ENLACE POR EL INSTAGRAM REAL -->
+
+                    <a href="#" target="_blank" aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a
+                        href="https://wa.me/5492646061764"
+                        target="_blank"
+                        aria-label="WhatsApp">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Amore Regalos · Todos los derechos reservados
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= CARRITO ================= -->
+
+    <div id="fondo-carrito" class="fondo-carrito">
+
+        <aside class="carrito">
+
+            <div class="carrito-header">
+
+                <div>
+
+                    <span>🛍️</span>
+
+                    <h2>Mi carrito</h2>
+
+                </div>
+
+                <button onclick="cerrarCarrito()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <div id="productos-carrito" class="productos-carrito">
+
+            </div>
+
+
+            <div id="carrito-vacio" class="carrito-vacio">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <h3>Tu carrito está vacío</h3>
+
+                <p>
+                    Agregá productos para comenzar tu pedido.
+                </p>
+
+                <button onclick="cerrarCarrito()">
+                    Ver productos
+                </button>
+
+            </div>
+
+
+            <div id="resumen-carrito" class="resumen-carrito">
+
+                <div class="subtotal">
+
+                    <span>Total</span>
+
+                    <strong id="total-carrito">
+                        $0
+                    </strong>
+
+                </div>
+
+                <button
+                    class="btn-finalizar"
+                    onclick="realizarPedido()">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Pedir por WhatsApp
+
+                </button>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <!-- ================= MODAL FAVORITOS ================= -->
+
+    <div id="modal-favoritos" class="modal-favoritos">
+
+        <div class="favoritos-contenido">
+
+            <div class="favoritos-header">
+
+                <h2>
+                    <i class="fa-solid fa-heart"></i>
+                    Mis favoritos
+                </h2>
+
+                <button onclick="cerrarFavoritos()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+            <div id="lista-favoritos">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+   <script src="./script.js?v=5"></script>
+
+</body>
+
+</html>
