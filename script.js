@@ -14,7 +14,7 @@ const productos = [
         nombre: "Taza de Cerámica Artesanal",
         precio: 7500,
         categoria: "Tazas",
-        imagen: "img/taza1.jpeg",
+        imagen: "taza1.jpeg",
         etiqueta: "Popular"
     },
 
@@ -23,7 +23,7 @@ const productos = [
         nombre: "Taza Corazón",
         precio: 6800,
         categoria: "Tazas",
-        imagen: "img/taza2.jpeg",
+        imagen: "taza2.jpeg",
         etiqueta: ""
     },
 
@@ -32,7 +32,7 @@ const productos = [
         nombre: "Taza Personalizada",
         precio: 8200,
         categoria: "Tazas",
-        imagen: "img/taza3.jpeg",
+        imagen: "taza3.jpeg",
         etiqueta: "Nuevo"
     },
 
@@ -41,7 +41,7 @@ const productos = [
         nombre: "Taza con Frase",
         precio: 7200,
         categoria: "Tazas",
-        imagen: "img/taza4.jpeg",
+        imagen: "taza4.jpeg",
         etiqueta: ""
     },
 
@@ -50,7 +50,7 @@ const productos = [
         nombre: "Oso de Peluche",
         precio: 12500,
         categoria: "Peluches",
-        imagen: "img/peluche1.jpeg",
+        imagen: "peluche1.jpeg",
         etiqueta: "Popular"
     },
 
@@ -59,7 +59,7 @@ const productos = [
         nombre: "Peluche Osito",
         precio: 14500,
         categoria: "Peluches",
-        imagen: "img/peluche2.jpeg",
+        imagen: "peluche2.jpeg",
         etiqueta: ""
     },
 
@@ -77,7 +77,7 @@ const productos = [
         nombre: "Peluche Suave",
         precio: 13500,
         categoria: "Peluches",
-        imagen: "img/peluche4.jpeg",
+        imagen: "peluche4.jpeg",
         etiqueta: ""
     },
 
@@ -86,7 +86,7 @@ const productos = [
         nombre: "Caja de Regalo",
         precio: 15000,
         categoria: "Regalos",
-        imagen: "img/regalo1.jpeg",
+        imagen: "regalo1.jpeg",
         etiqueta: "Popular"
     },
 
@@ -95,7 +95,7 @@ const productos = [
         nombre: "Desayuno Sorpresa",
         precio: 18000,
         categoria: "Regalos",
-        imagen: "img/regalo2.jpeg",
+        imagen: "regalo2.jpeg",
         etiqueta: ""
     },
 
@@ -104,7 +104,7 @@ const productos = [
         nombre: "Box Romántico",
         precio: 22000,
         categoria: "Regalos",
-        imagen: "img/regalo3.jpeg",
+        imagen: "regalo3.jpeg",
         etiqueta: "Nuevo"
     },
 
@@ -113,7 +113,7 @@ const productos = [
         nombre: "Set Especial",
         precio: 19500,
         categoria: "Regalos",
-        imagen: "img/regalo4.jpeg",
+        imagen: "regalo4.jpeg",
         etiqueta: ""
     },
 
@@ -122,7 +122,7 @@ const productos = [
         nombre: "Llavero Personalizado",
         precio: 4500,
         categoria: "Accesorios",
-        imagen: "img/accesorio1.jpeg",
+        imagen: "accesorio1.jpeg",
         etiqueta: ""
     },
 
@@ -131,7 +131,7 @@ const productos = [
         nombre: "Pulsera",
         precio: 5500,
         categoria: "Accesorios",
-        imagen: "img/accesorio2.jpeg",
+        imagen: "accesorio2.jpeg",
         etiqueta: ""
     },
 
@@ -140,7 +140,7 @@ const productos = [
         nombre: "Collar",
         precio: 7500,
         categoria: "Accesorios",
-        imagen: "img/accesorio3.jpeg",
+        imagen: "accesorio3.jpeg",
         etiqueta: "Popular"
     },
 
@@ -149,7 +149,7 @@ const productos = [
         nombre: "Llaverito",
         precio: 4000,
         categoria: "Accesorios",
-        imagen: "img/accesorio4.jpeg",
+        imagen: "accesorio4.jpeg",
         etiqueta: ""
     },
 
@@ -158,7 +158,7 @@ const productos = [
         nombre: "Pulsera Especial",
         precio: 6500,
         categoria: "Accesorios",
-        imagen: "img/accesorio5.jpeg",
+        imagen: "accesorio5.jpeg",
         etiqueta: ""
     },
 
@@ -167,7 +167,7 @@ const productos = [
         nombre: "Accesorio Personalizado",
         precio: 8500,
         categoria: "Accesorios",
-        imagen: "img/accesorio6.jpeg",
+        imagen: "accesorio6.jpeg",
         etiqueta: "Nuevo"
     }
 
