@@ -68,7 +68,7 @@ const productos = [
         nombre: "Peluche Corazón",
         precio: 11000,
         categoria: "Peluches",
-        imagen: "img/peluche3.jpeg",
+        imagen: "peluche3.jpeg",
         etiqueta: "Nuevo"
     },
 
