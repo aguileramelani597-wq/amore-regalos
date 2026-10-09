@@ -61,16 +61,17 @@ input {
 ===================================================== */
 
 .contenedor {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: auto;
+   box-sizing: border-box; /* Agrega esto para evitar desbordamientos por rellenos */
+}
 }
 
 
 /* =====================================================
    HEADER
 ===================================================== */
-
 .header {
     background: rgba(255, 255, 255, 0.97);
     border-bottom: 1px solid #f4dce6;
@@ -78,17 +79,23 @@ input {
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
-}
 
+    /* Agrega estas dos líneas */
+    width: 100%;
+    left: 0;
+}
 .header-contenido {
     min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 25px;
+    
+    /* Agrega estas tres líneas obligatorias */
+    width: 100%;
+    padding: 0 20px; 
+    box-sizing: border-box;
 }
-
-
 /* LOGO */
 
 .logo {
